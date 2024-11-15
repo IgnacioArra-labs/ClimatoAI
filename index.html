@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>App</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap">
+    <script src="https://cdn.lordicon.com/lusqsztk.js"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body, html {
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background:#ffffff;
+            font-family: 'Poppins', sans-serif;
+            overflow: hidden; /* Prevent scrolling during loading */
+            transition: opacity 1s ease-in-out; /* Fade-out transition */
+        }
+
+        body.fade-out {
+            opacity: 0; /* Fade-out effect */
+        }
+
+        .loading-container {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+            text-align: center;
+        }
+
+        .loading-container h1 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+            color: #ffffff;
+        }
+
+        .loading-icon {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    </style>
+</head>
+<body>
+            <lord-icon
+                src="https://cdn.lordicon.com/gxihzehy.json"
+                trigger="loop"
+                colors="primary:#121331,secondary:#08a88a"
+                style="width:80px;height:80px;">
+            </lord-icon>
+        </div>
+    </div>
+
+    <script>
+        // Set timeout for the loading screen
+        setTimeout(() => {
+            document.body.classList.add('fade-out'); // Add fade-out class for transition
+            setTimeout(() => {
+                window.location.href = "forecast.html"; // Redirect to another page
+            }, 1000); // Allow time for the fade-out animation
+        }, 5000); // Display loading screen for 5 seconds
+    </script>
+</body>
+</html>

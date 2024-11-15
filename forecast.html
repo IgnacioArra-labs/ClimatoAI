@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>App</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.lordicon.com/lusqsztk.js"></script>
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <div class="container" id="mainContainer">
+        <header>
+            <div class="header-text">
+                <h1>Buenos días 🤗</h1>
+                <p id="date"></p>
+            </div>
+        </header>
+
+        <section class="weather-card">
+            <div class="location">
+                <span>Mi Ubicación</span>
+                <strong>Mendoza, Argentina</strong>
+            </div>
+            <div class="temperature">
+                <span>0°C</span>
+                <p></p>
+            </div>
+            <div class="details">
+                <div class="detail-item">
+                    <span>Viento</span>
+                    <span>10 km/h</span>
+                </div>
+                <div class="detail-item">
+                    <span>Humedad</span>
+                    <span>54%</span>
+                </div>
+            </div>
+        </section>
+
+        <section class="forecast-card">
+            <h2>Pronóstico de 3 Días</h2>
+            <div class="forecast-item">
+                <lord-icon
+                    src="https://cdn.lordicon.com/ggehlmqa.json"
+                    trigger="loop"
+                    colors="primary:#121331,secondary:#08a88a"
+                    style="width:50px;height:50px;">
+                </lord-icon>
+                <div>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+            <div class="forecast-item">
+                <lord-icon
+                    src="https://cdn.lordicon.com/cznlxcyj.json"
+                    trigger="loop"
+                    colors="primary:#121331,secondary:#e83a30"
+                    style="width:50px;height:50px;">
+                </lord-icon>
+                <div>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+            <div class="forecast-item">
+                <lord-icon
+                    src="https://cdn.lordicon.com/ggehlmqa.json"
+                    trigger="loop"
+                    colors="primary:#121331,secondary:#08a88a"
+                    style="width:50px;height:50px;">
+                </lord-icon>
+                <div>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </section>
+
+        <button class="forecast-button" id="aiButton">Climato AI</button>
+    </div>
+
+    <!-- Overlay para manejar el clic fuera del círculo -->
+    <div class="overlay" id="overlay"></div>
+
+    <!-- Medio círculo que aparece desde abajo -->
+    <div class="half-circle" id="aiCircle"></div>
+    <div id="particles-js"></div>
+</body>
+</html>
